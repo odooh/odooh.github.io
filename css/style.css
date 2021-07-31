@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+}
+.contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav {
+    width: 8rem;
+    padding-right: 5rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-family: avenir;
+    background-image:url('img/nav.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: sticky;
+}
+nav a {
+    color: #b8b8b88c;
+}
+
+.contents img {
+    height: 10rem;
+    object-fit: cover;
+}
+#background {
+    background-image: url('img/nav.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav img{
+    width: 6rem;
+    object-fit: cover;
+}
+
+.sticky{
+    display: inline-block;
+    position: sticky;
+    top: 20rem;
+}
+
+*:hover{
+    text-decoration: underline;
+    color: green;
+}
