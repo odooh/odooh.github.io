@@ -40,7 +40,7 @@ nav img{
 .sticky{
     display: inline-block;
     position: sticky;
-    top: 20rem;
+    bottom: 10rem;
 }
 
 *:hover{
