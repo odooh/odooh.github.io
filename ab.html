@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow: hidden; /* Hide the overflow to prevent scrollbars */
+            cursor: url('cursor.png'), auto; /* Set custom cursor for the entire body */
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .bear {
+    line-height: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: dimgray;
+    letter-spacing: 0em;
+    font-stretch: expanded;
+    margin: 0; /* Remove margin between bears */
+    white-space: pre; /* Preserve whitespace for ASCII art */
+    animation: bounce 2s infinite; /* Add bounce animation */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure .bear div takes full width */
+}
+
+.bear:nth-child(2) {
+    animation: bounce 2s infinite 1s; /* Delay the middle bear by 1s */
+}
+
+.bear-container {
+    position: absolute;
+    top: 60%; /* Adjusted to give space to the title */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 0; /* Remove gap between flex items */
+}
+marquee {
+    scrollamount: 3;
+    vspace: 1;
+    behavior: alternate;
+    scrolldelay: 180;
+    font-style: italic;
+    font-size: small;
+    width: 100%; /* Set marquee width to match parent .bear div */
+    display: block;
+    text-align: center;
+}
+
+        .title {
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            text-align: center;
+            font-size: 1rem;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 0.7rem;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        mark {
+            background-color: silver;
+            color: black;
+        }
+
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .bear-container {
+                flex-direction: column; /* Stack bears vertically */
+                top: 50%; /* Adjust position for better view */
+                transform: translate(-50%, -50%);
+            }
+            .bear {
+                display: none;
+            }
+            .bear:first-child {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        *--*--*--*--*--*--*--*--*--*--*─-*--*─-*--*--*--*--</br>
+        *-▓▒░▓▒░▓▒░*--*--*-▓▓▒░&nbsp;&nbsp;▓▓▓▒░ Let's sing together-</br>
+        *-▓▒░▓▒▓▓▓▒░▓▓▒▓▓▒░ ▓▒░ ▓▓▒░▓▒░ *-*-*  *-*-*  *-*-*-*</br>
+        *-▓▓▓▓▒░▓▒░▓▒░▓░░▓▒░▓▒░* ▓▓▒░&nbsp;▒▓▓▓▒░▓▓▓▓▒░▓▓▓▓▒░--*</br>
+        *-▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░*-*▓▓▒░▓▓░▓▓▒▓▓░▓▓▒░▓░▓▓▒░-*</br>
+        *-▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░*▓▒░▓▓▒▓▓░▓▓▒▓▓░▓▓▒░▓▓▓▓▒░-*</br>
+        *-▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░*-▓▓▓▒░ ▓▓▓▒░▓▓░▓▓▒ -░▒▓▒░-*</br>
+        *--*--*--*--*--*--*--*--*--*--*─-*--*─-*--░▓▓▓▓▒░-*</br>
+        </br>
+    </div>
+    <div class="bear-container">
+        <div class="bear" style="color: silver;">
+            <br/>
+            <marquee scrollamount="4" vspace="1" behavior="alternate" scrolldelay="180">♪♩Whoo--♪♩woo--          </marquee><br/>
+            <marquee scrollamount="4" vspace="1" behavior="alternate" scrolldelay="180">    oooh--♩♪♫♬    </marquee><br/>
+────────────────────────────────────────<br/>
+────────────────────────────────────────<br/>
+───────────░▒░────────────░░░───────────<br/>
+─────────░█████▓░──────░░▒▓▓▓░──────────<br/>
+────────▒█████████▓███████████▓░────────<br/>
+────────██▓█▓░▓██▓▓▓▓█▓██▓░████░────────<br/>
+───────▒▓███░▓▓██████▓▓▓▓▓▒░███▓▒░──────<br/>
+───────░▒▓███▓▓▓████████▓▓▓▓███▓░───────<br/>
+───────░░▒▓█▓█████████████▓████░░───────<br/>
+───────▒░░██▓▓██▒█████░██▓████░░░───────<br/>
+───────▒░▒████████▒▓██████████░░────────<br/>
+─────░─░▒░▒██████▒███▒███████░░░────────<br/>
+───────░▒░▒███████▒█▓████████▒░▒────────<br/>
+───░────▒░▒██████████████████░░▒────────<br/>
+───────░▓███▓██████████▓▓█████░░────────<br/>
+───────▒██▓▓▓█▓▓████▒████████▒█▓────────<br/>
+──────░██▓▓▓▓█████████████████░██───────<br/>
+──────░███▒██▓████████████▓▓▓█▒██▒──────<br/>
+──────▒████▓██████▓▒██▒█▒████▓███░──────<br/>
+──────░███████████▒▓▓████████▓▓██▓░─────<br/>
+──────░▓████▓▒▒▓█▒███████████████▓▓─────<br/>
+──────░░█████████████████▓▓▓█████▒▓──░──<br/>
+──────░░█████████████████████████▓█─────<br/>
+──────░░████████████▓▒████▓████▓███░────<br/>
+──────░▒██░▒░███████▓████▓████░▒░███────<br/>
+─────░██▒██████████████████░██████▓█░───<br/>
+─░──░███▓████████████████▒████████▒██───<br/>
+────░████████████████████▓███████████───<br/>
+────░▒█████████████▒▓▓███████████████───<br/>
+────░▒░▓███████████▓▓▓▓█████████████░───<br/>
+────▓▒░░▒███████▒██▓▓▒▓█▓▓██████████────<br/>
+─────░░▒░▒▓████▒▒▓█▒▒▒▓▓▓▒▒▓▓▓▓▓▓▒▓█────<br/>
+──────▒░░▒▒▒░▒▒▒▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓───░─<br/>
+───────▒▒▒▒▒▒▒▒▒▒▒▓────░▓▒▒▒▒▒▒▒▓█──────<br/>
+────────░▓▒▒░░▒▒█─────────█▓▓██░────────<br/>
+────────────────────────────────────────<br/>
+        </div>
+        <div class="bear" style="color: silver;">
+            <br/>
+            <marquee scrollamount="4" vspace="1" behavior="alternate" scrolldelay="180">          ♪♩so let's learn HTML          </marquee><br/>
+            <marquee scrollamount="4" vspace="1" behavior="alternate" scrolldelay="180">    we'll have the best of time♩♪♫♬    </marquee><br/>
+────────────────────────────────────────<br/>
+────────────────────────────────────────<br/>
+───────────░▒░────────────░░░───────────<br/>
+─────────░█████▓░──────░░▒▓▓▓░──────────<br/>
+────────▒█████████▓███████████▓░────────<br/>
+────────██▓█▓░▓██▓▓▓▓█▓██▓░████░────────<br/>
+───────▒▓███░▓▓██████▓▓▓▓▓▒░███▓▒░──────<br/>
+───────░▒▓███▓▓▓████████▓▓▓▓███▓░───────<br/>
+───────░░▒▓█▓█████████████▓████░░───────<br/>
+───────▒░░██▓▓██▒█████░██▓████░░░───────<br/>
+───────▒░▒████████▒▓██████████░░────────<br/>
+─────░─░▒░▒██████▒███▒███████░░░────────<br/>
+───────░▒░▒███████▒█▓████████▒░▒────────<br/>
+───░────▒░▒██████████████████░░▒────────<br/>
+───────░▓███▓██████████▓▓█████░░────────<br/>
+───────▒██▓▓▓█▓▓████▒████████▒█▓────────<br/>
+──────░██▓▓▓▓█████████████████░██───────<br/>
+──────░███▒██▓████████████▓▓▓█▒██▒──────<br/>
+──────▒████▓██████▓▒██▒█▒████▓███░──────<br/>
+──────░███████████▒▓▓████████▓▓██▓░─────<br/>
+──────░▓████▓▒▒▓█▒███████████████▓▓─────<br/>
+──────░░█████████████████▓▓▓█████▒▓──░──<br/>
+──────░░█████████████████████████▓█─────<br/>
+──────░░████████████▓▒████▓████▓███░────<br/>
+──────░▒██░▒░███████▓████▓████░▒░███────<br/>
+─────░██▒██████████████████░██████▓█░───<br/>
+─░──░███▓████████████████▒████████▒██───<br/>
+────░████████████████████▓███████████───<br/>
+────░▒█████████████▒▓▓███████████████───<br/>
+────░▒░▓███████████▓▓▓▓█████████████░───<br/>
+────▓▒░░▒███████▒██▓▓▒▓█▓▓██████████────<br/>
+─────░░▒░▒▓████▒▒▓█▒▒▒▓▓▓▒▒▓▓▓▓▓▓▒▓█────<br/>
+──────▒░░▒▒▒░▒▒▒▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓───░─<br/>
+───────▒▒▒▒▒▒▒▒▒▒▒▓────░▓▒▒▒▒▒▒▒▓█──────<br/>
+────────░▓▒▒░░▒▒█─────────█▓▓██░────────<br/>
+────────────────────────────────────────<br/>
+        </div>
+        <div class="bear" style="color: silver;">
+            <br/>
+            <marquee scrollamount="4" vspace="1" behavior="alternate" scrolldelay="180">          ♪♩Make some html--          </marquee><br/>
+            <marquee scrollamount="4" vspace="1" behavior="alternate" scrolldelay="180">    Yeah-♪♫    </marquee><br/>
+────────────────────────────────────────<br/>
+────────────────────────────────────────<br/>
+───────────░▒░────────────░░░───────────<br/>
+─────────░█████▓░──────░░▒▓▓▓░──────────<br/>
+────────▒█████████▓███████████▓░────────<br/>
+────────██▓█▓░▓██▓▓▓▓█▓██▓░████░────────<br/>
+───────▒▓███░▓▓██████▓▓▓▓▓▒░███▓▒░──────<br/>
+───────░▒▓███▓▓▓████████▓▓▓▓███▓░───────<br/>
+───────░░▒▓█▓█████████████▓████░░───────<br/>
+───────▒░░██▓▓██▒█████░██▓████░░░───────<br/>
+───────▒░▒████████▒▓██████████░░────────<br/>
+─────░─░▒░▒██████▒███▒███████░░░────────<br/>
+───────░▒░▒███████▒█▓████████▒░▒────────<br/>
+───░────▒░▒██████████████████░░▒────────<br/>
+───────░▓███▓██████████▓▓█████░░────────<br/>
+───────▒██▓▓▓█▓▓████▒████████▒█▓────────<br/>
+──────░██▓▓▓▓█████████████████░██───────<br/>
+──────░███▒██▓████████████▓▓▓█▒██▒──────<br/>
+──────▒████▓██████▓▒██▒█▒████▓███░──────<br/>
+──────░███████████▒▓▓████████▓▓██▓░─────<br/>
+──────░▓████▓▒▒▓█▒███████████████▓▓─────<br/>
+──────░░█████████████████▓▓▓█████▒▓──░──<br/>
+──────░░█████████████████████████▓█─────<br/>
+──────░░████████████▓▒████▓████▓███░────<br/>
+──────░▒██░▒░███████▓████▓████░▒░███────<br/>
+─────░██▒██████████████████░██████▓█░───<br/>
+─░──░███▓████████████████▒████████▒██───<br/>
+────░████████████████████▓███████████───<br/>
+────░▒█████████████▒▓▓███████████████───<br/>
+────░▒░▓███████████▓▓▓▓█████████████░───<br/>
+────▓▒░░▒███████▒██▓▓▒▓█▓▓██████████────<br/>
+─────░░▒░▒▓████▒▒▓█▒▒▒▓▓▓▒▒▓▓▓▓▓▓▒▓█────<br/>
+──────▒░░▒▒▒░▒▒▒▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓───░─<br/>
+───────▒▒▒▒▒▒▒▒▒▒▒▓────░▓▒▒▒▒▒▒▒▓█──────<br/>
+────────░▓▒▒░░▒▒█─────────█▓▓██░────────<br/>
+────────────────────────────────────────<br/>
+        </div>
+    </div>
+    <footer>
+        <p>footer</p>
+    </footer>
+</body>
+<script>
+    const body = document.querySelector("body");
+    const bears = document.querySelectorAll(".bear");
+    const title = document.querySelector(".title");
+    const footer = document.querySelector("footer");
+    const mark = document.querySelector("mark");
+    const colors = ['dimgray', 'silver', 'whitesmoke', 'slategray', 'midnightblue', 'mediumblue', 'dodgerblue', 'deepskyblue', 'powderblue', 'lavender', 'mediumaquamarine', 'lightseagreen', 'seagreen', 'olive', 'forestgreen', 'limegreen', 'springgreen', 'lime', 'honeydew', 'lightyellow', 'bisque', 'khaki', 'yellow', 'orange', 'tan', 'peru', 'sienna', 'chocolate', 'coral', 'lightsalmon', 'salmon', 'tomato', 'red', 'firebrick', 'maroon', 'rosybrown', 'pink', 'hotpink', 'deeppink', 'orchid', 'slateblue', 'purple', 'plum'];
+
+    body.addEventListener("click", function () {
+        for (let i = 0; i < bears.length; i++) {
+            const coloridx = Math.floor(Math.random() * colors.length);
+            bears[i].style.color = colors[coloridx];
+        }
+        title.style.color = bears[1].style.color;
+        footer.style.color = bears[1].style.color;
+        mark.style.backgroundColor = bears[1].style.color;
+    });
+
+</script>
+</html>
