@@ -1,1 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: hidden; /* Hide the overflow to prevent scrollbars */
+    cursor: url('cursor.png'), auto; /* Set custom cursor for the entire body */
+}
 
+.bear {
+    line-height: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: dimgray;
+    letter-spacing: 0em;
+    font-stretch: expanded;
+    margin: 0; /* Remove margin between bears */
+    white-space: pre; /* Preserve whitespace for ASCII art */
+    animation: bounce 2s infinite; /* Add bounce animation */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure .bear div takes full width */
+    position: absolute; /* Make the element draggable */
+    cursor: move; /* Show move cursor */
+}
+
+.bear:nth-child(2) {
+    animation: bounce 2s infinite 1s; /* Delay the middle bear by 1s */
+}
+
+.marquee {
+    scrollamount: 5;
+    vspace: 1;
+    behavior: alternate;
+    scrolldelay: 180;
+    font-style: italic;
+    font-size: small;
+    width: 100%; /* Set marquee width to match parent .bear div */
+    display: block;
+    text-align: center;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.bear-container {
+    position: absolute;
+    top: 60%; /* Adjusted to give space to the title */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 0; /* Remove gap between flex items */
+}
+
+.title {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Adjust title width for mobile view */
+    overflow-wrap: break-word; /* Ensure long text wraps to the next line */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+mark {
+    background-color: silver;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .bear-container {
+        flex-direction: column; /* Stack bears vertically */
+        top: 50%; /* Adjust position for better view */
+        transform: translate(-50%, -50%);
+    }
+
+    .bear {
+        display: none; /* Hide all bears on mobile */
+    }
+
+    .bear:first-child {
+        display: block; /* Show only the first bear on mobile */
+        position: static; /* Reset position for better alignment */
+        transform: none; /* Remove transform for static position */
+    }
+
+    .title {
+        font-size: 0.8rem; /* Adjust title font size for mobile */
+        top: 5%; /* Adjust title position for mobile */
+    }
+}
