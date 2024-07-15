@@ -14,31 +14,3 @@ body.addEventListener("click", function () {
     footer.style.color = bears[1].style.color;
     mark.style.backgroundColor = bears[1].style.color;
 });
-
-bears.forEach(bear => {
-    bear.addEventListener('mousedown', function (e) {
-        const bearElement = bear;
-        let shiftX = e.clientX - bearElement.getBoundingClientRect().left;
-        let shiftY = e.clientY - bearElement.getBoundingClientRect().top;
-
-        function moveAt(pageX, pageY) {
-            bearElement.style.left = pageX - shiftX + 'px';
-            bearElement.style.top = pageY - shiftY + 'px';
-        }
-
-        function onMouseMove(event) {
-            moveAt(event.pageX, event.pageY);
-        }
-
-        document.addEventListener('mousemove', onMouseMove);
-
-        bearElement.onmouseup = function () {
-            document.removeEventListener('mousemove', onMouseMove);
-            bearElement.onmouseup = null;
-        };
-    });
-
-    bear.ondragstart = function () {
-        return false;
-    };
-});

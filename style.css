@@ -1,0 +1,146 @@
+html {
+    cursor: url('cursor.png'), auto;
+    /* Set custom cursor for the entire body */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: hidden;
+    /* Hide the overflow to prevent scrollbars */
+    cursor: url('cursor.png'), auto;
+    /* Set custom cursor for the entire body */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.bear {
+    line-height: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: dimgray;
+    letter-spacing: 0em;
+    font-stretch: expanded;
+    margin: 0;
+    /* Remove margin between bears */
+    white-space: pre;
+    /* Preserve whitespace for ASCII art */
+    animation: bounce 2s infinite;
+    /* Add bounce animation */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* Ensure .bear div takes full width */
+    position: relative;
+    /* Adjust for relative positioning */
+    cursor: url('cursor.png'), auto;
+}
+
+.bear:nth-child(2) {
+    animation: bounce 2s infinite 1s;
+    /* Delay the middle bear by 1s */
+}
+
+marquee {
+    scrollamount: 5;
+    vspace: 1;
+    behavior: alternate;
+    scrolldelay: 180;
+    font-style: italic;
+    font-size: small;
+    width: auto;
+    /* Set marquee width to match parent .bear div */
+    display: block;
+    text-align: center;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.bear-container {
+    position: relative;
+    top: 60%;
+    /* Adjusted to give space to the title */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
+    gap: 0;
+    /* Remove gap between flex items */
+}
+
+.title {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+    top: 5%;
+    /* Adjust title position */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    /* Adjust title width for mobile view */
+    overflow-wrap: break-word;
+    /* Ensure long text wraps to the next line */
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+mark {
+    background-color: silver;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .bear-container {
+        top: 50%;
+        /* Adjust position for better view */
+        left: 15%;
+
+    }
+
+    .bear {
+        display: none;
+        /* Hide all bears on mobile */
+    }
+
+    .bear:first-child {
+        display: block;
+        /* Show only the first bear on mobile */
+    }
+
+    .title {
+        font-size: 0.8rem;
+        /* Adjust title font size for mobile */
+        top: 5%;
+        /* Adjust title position for mobile */
+        position: relative;
+        transform: translateX(-50%);
+    }
+
+    marquee {
+        width: 66.6%;
+    }
+}
